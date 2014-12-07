@@ -2,10 +2,6 @@
 <SignedInfo>
 <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></CanonicalizationMethod>
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
-<Reference URI="bin/UIIU.exe">
-<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>1MWFyYRIsKYPFDGPNnTTYzyVXIEkpxQMO/WNvoLytrA=</DigestValue>
-</Reference>
 <Reference URI="info/manifest.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>tmGxzDu9C1+Uq5qTT0kHmRkytx8crS6+DOb3OFQh6z8=</DigestValue>
@@ -58,6 +54,10 @@
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>1d0oEZHqPn+QzNzGIHwj9ODby6x9ggFs9uOsav6jPNs=</DigestValue>
 </Reference>
+<Reference URI="bin/UIIU.exe">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>H1cxxxpqo6P9DgO4Hx/lPXFQkbODAu8LBFY0DoeOJsY=</DigestValue>
+</Reference>
 <Reference URI="#prop">
 <Transforms>
 <Transform Algorithm="http://www.w3.org/2006/12/xml-c14n11"></Transform>
@@ -67,9 +67,9 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-AtOp3LA8xc15O+wJs0jssFwnQvVcO1qlVZ0z0Lz9/42wAifBc+AgOdO26csZKZCXP4rwbUIwBaEp
-sH+Zt/AiQQrCynmarVMojRadBQ68G8jAkUAnu1vnD7PgZeFTJfMdtPx/LIEswSmxyBywDaSaoLTY
-8v9ffwI6BJYCsfvKUFc=
+L435Hy5zXmA9Xy0Qs/15r860XHjvnzUT2YYoUjeVnVvQaBETctlBbFI2Qm0EMlG8Cq4Wb8XDK1rl
+ddSiOJC9Y8yBhCboZvETmsfy5Hdo6SEGyLZlkOTimKwNKwIRpnfMjR0sgrtbyy8z9VKq17u+lUOu
+VZr22qAvpvN6ffKA8eU=
 </SignatureValue>
 <KeyInfo>
 <X509Data>

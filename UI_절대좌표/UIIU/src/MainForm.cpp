@@ -114,7 +114,7 @@ MainForm::OnInitializing(void)
 	}
 	fclose(f);
 
-	/*
+/*
 	bi[1][0] = 100; bi[1][1] = 50;
 	bic++;
 	bi[2][0] = 700; bi[2][1] = 20;
@@ -125,7 +125,7 @@ MainForm::OnInitializing(void)
 			bic++;
 			bi[5][0] = 1500; bi[5][1] = 90;
 				bic++;
-				*/
+*/
 
 	f = fopen("/home/developer/LCD_State.txt", "r");
 		while(0 < fscanf(f, "%d, %d\n", &li[lic][0], &li[lic][1])) {
@@ -178,8 +178,14 @@ MainForm::OnInitializing(void)
 		    	  __pCanvas->DrawText(Point(10, 180), String(L"100%"));
 		    	  __pCanvas->DrawText(Point(10, 440), String(L"0%"));
 
+		    	  __pCanvas->SetForegroundColor(Color::GetColor(COLOR_ID_BLACK));
+		    	  __pCanvas->SetLineWidth(2);
+		    	  __pCanvas->DrawLine(Point(20, 180), Point(20, 450));
+		    	  __pCanvas->DrawLine(Point(20, 450), Point(680, 450));
+
 		    	  __pCanvas->SetForegroundColor(Color::GetColor(COLOR_ID_GREEN));
 		    	  __pCanvas->SetLineWidth(4);
+
 
 		    	  for(int i = 1; i < bic; i++) {
 		    		  //AppLog("ESLAB %f, %f", 20 + (float)bi[i-1][0]/max*680, 460 - (float)bi[i-1][1]/100*280);
@@ -192,19 +198,20 @@ MainForm::OnInitializing(void)
 
 		    	  for(int i = 1; i < lic; i++) {
 		    		  	  if(li[i-1][1] != 0)
-		    		  		  __pCanvas->FillRectangle(Color(58, 123, 220, 0xFF),
+		    		  		  __pCanvas->FillRectangle(Color(40, 120, 182, 0xFF),
 		    		  				  FloatRectangle(20 + (float)li[i-1][0]/max*680, 480, ((float)li[i][0] - li[i-1][0])/max*680, 60));
 	  		      }
 		    	  if(lic >=1 && lic < max && li[lic-1][1] != 0)
-		    		  __pCanvas->FillRectangle(Color(58, 123, 220, 0xFF),
+		    	  //AppLog("ESLAB %f %f", 20 + (float)li[lic-1][0]/max*680, 480, ((float)max - li[lic-1][0])/max*680);
+		    		  __pCanvas->FillRectangle(Color(40, 120, 182, 0xFF),
 		    		  		    		  				  FloatRectangle(20 + (float)li[lic-1][0]/max*680, 480, ((float)max - li[lic-1][0])/max*680, 60));
 		    	  for(int i = 1; i < wic; i++) {
 		    	  		    		  	  if(wi[i-1][1] != 0)
-		    	  		    		  		  __pCanvas->FillRectangle(Color(58, 123, 220, 0xFF),
+		    	  		    		  		  __pCanvas->FillRectangle(Color(40, 120, 182, 0xFF),
 		    	  		    		  				  FloatRectangle(20 + (float)wi[i-1][0]/max*680, 560, ((float)wi[i][0] - wi[i-1][0])/max*680, 60));
 		    	  }
 		    	  if(wic >=1 && wic < max && wi[wic-1][1] != 0)
-		    	  		    		  __pCanvas->FillRectangle(Color(58, 123, 220, 0xFF),
+		    	  		    		  __pCanvas->FillRectangle(Color(40, 120, 182, 0xFF),
 		    	  		    		  		    		  				  FloatRectangle(20 + (float)wi[wic-1][0]/max*680, 560, ((float)max - wi[wic-1][0])/max*680, 60));
 
 
